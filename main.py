@@ -1,7 +1,8 @@
-# Configuring Kivy (sets unmutable Window size)
+# Configuring Kivy (sets unmutable Window size and removing maximize/minimize button)
 from kivy.config import Config
 Config.set('graphics', 'width', '350')
 Config.set('graphics', 'height', '500')
+Config.set('graphics', 'resizable', 0)
 
 # Main Imports
 from kivy.factory import Factory
