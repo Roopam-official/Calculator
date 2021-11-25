@@ -5,17 +5,11 @@
     canvas.before:
         Color:
             # background color
-            rgba: (1, 1, 1, 1) if self.state == 'normal' else (.9, .9, .9, 1)
+            rgba: (1, 1, 1, 1) if self.state == 'normal' else (.89, .89, .89, 1)
         RoundedRectangle:
             pos: self.pos
             size: self.size
             radius: [10]
-        # Creating the border of the button
-        # Color:
-        #     rgba: 0, 0, 0, .05
-        # Line:
-        #     width: .5
-        #     rectangle: self.x, self.y, self.width, self.height
 
 # Custom Gray Button
 <GrayButton@ButtonBehavior+Label>:
@@ -24,17 +18,11 @@
     canvas.before:
         Color:
             # background color
-            rgba: (.95, .95, .95, 1) if self.state == 'normal' else (.9, .9, .9, 1)
+            rgba: (.97, .97, .97, 1) if self.state == 'normal' else (.89, .89, .89, 1)
         RoundedRectangle:
             pos: self.pos
             size: self.size
             radius: [10]
-        # Creating the border of the button
-        # Color:
-        #     rgba: 0, 0, 0, .05
-        # Line:
-        #     width: .5
-        #     rectangle: self.x, self.y, self.width, self.height
 
 # Custom Top Bar White Button
 <Top_bar_WhiteButton@ButtonBehavior+Label>:
@@ -43,7 +31,7 @@
     canvas.before:
         Color:
             # background color
-            rgba: (1, 1, 1, 1) if self.state == 'normal' else (.9, .9, .9, 1)
+            rgba: (1, 1, 1, 1) if self.state == 'normal' else (.89, .89, .89, 1)
         Rectangle:
             pos: self.pos
             size: self.size
