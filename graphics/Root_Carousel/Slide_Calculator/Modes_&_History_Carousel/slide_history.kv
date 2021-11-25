@@ -1,0 +1,64 @@
+<Slide_History@BoxLayout>:
+	BoxLayout:
+		orientation: "vertical"
+		size_hint: (.75,1)
+
+		BoxLayout:
+			size_hint: (1,.9)
+			ScrollView:
+    			do_scroll_x: False
+				scroll_wheel_distance: 100
+				smooth_scroll_end: 3
+				bar_width: .5
+				GridLayout:
+					id: history_entry_layout
+					cols: 1
+					size_hint_y: None
+					height: self.minimum_height
+					# All the History Entry Buttons are added dynamically in this layout
+
+		BoxLayout:
+			size_hint: (1,.1)
+			Button:
+				id: hist_clear
+				background_down: "white.png"
+				background_normal: "white.png"
+				color: (0,1,1,1)
+				font_size: 15
+				bold: True
+				text: "Clear History"
+
+
+	BoxLayout:
+		orientation: "horizontal"
+		size_hint: (.25,1)
+		GridLayout:
+			cols: 1
+			rows: 6
+			padding: 3
+    		spacing: 3
+			GrayButton:
+				id: hist_clear
+				font_size: 27
+				font_name: "MaterialDesign"
+				text: u"\U000F0B5C" # clear
+			GrayButton:
+				id: hist_divide
+				font_size: 27
+				text: "÷"
+			GrayButton:
+				id: hist_multiply
+				font_size: 27
+				text: u"\u00D7" # "x"
+			GrayButton:
+				id: hist_subtraction
+				font_size: 27
+				text: u"\u2212" # "-"
+			GrayButton:
+				id: hist_addition
+				font_size: 27
+				text: "+"
+			GrayButton:
+				id: hist_equals
+				font_size: 27
+				text: "="

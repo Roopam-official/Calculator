@@ -1,0 +1,29 @@
+<Top_App_Bar@BoxLayout>:
+	orientation: "vertical"
+	size_hint: (1,.1)
+	GridLayout:
+		cols: 4
+		Top_bar_WhiteButton:
+			disabled: True
+			size_hint: (.7,1)
+		Top_bar_WhiteButton:
+			id: app_mode_btn
+			font_name:"MaterialDesign"
+			font_size: 23
+			size_hint: (.17,1)
+			text: u"\U000F05A2" # Kg icon
+			on_press: app.app_mode()
+		Top_bar_WhiteButton:
+			id: calc_modes_btn
+			font_name: "FreeSerif"
+			font_size: 23
+			size_hint: (.17,1)
+			text: "f(x)"
+			on_press: app.calculator_modes()
+		Top_bar_WhiteButton:
+			id: hist_cntrlr
+			font_name: "MaterialDesign"
+			font_size: 23
+			size_hint: (.17,1)
+    		text: u"\U000F02DA" # history
+			on_press: app.hist_cntrlr()

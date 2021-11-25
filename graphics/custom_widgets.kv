@@ -1,0 +1,61 @@
+# Custom White Button
+<WhiteButton@ButtonBehavior+Label>:
+    # color for the button
+    color: 0, 0, 0, 1
+    canvas.before:
+        Color:
+            # background color
+            rgba: (1, 1, 1, 1) if self.state == 'normal' else (.9, .9, .9, 1)
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [10]
+        # Creating the border of the button
+        # Color:
+        #     rgba: 0, 0, 0, .05
+        # Line:
+        #     width: .5
+        #     rectangle: self.x, self.y, self.width, self.height
+
+# Custom Gray Button
+<GrayButton@ButtonBehavior+Label>:
+    # color for the button
+    color: 0, 0, 0, 1
+    canvas.before:
+        Color:
+            # background color
+            rgba: (.97, .97, .97, 1) if self.state == 'normal' else (.9, .9, .9, 1)
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [10]
+        # Creating the border of the button
+        # Color:
+        #     rgba: 0, 0, 0, .05
+        # Line:
+        #     width: .5
+        #     rectangle: self.x, self.y, self.width, self.height
+
+# Custom Top Bar White Button
+<Top_bar_WhiteButton@ButtonBehavior+Label>:
+    # color for the button
+    color: 0, 0, 0, 1
+    canvas.before:
+        Color:
+            # background color
+            rgba: (1, 1, 1, 1) if self.state == 'normal' else (.9, .9, .9, 1)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+# Custom Button for history entry
+<History_entry_custom_button@Button>:
+	text: ""
+    markup: True
+    background_normal: "white.png"
+    background_down: "white.png"
+    size_hint_y: None
+    text_size: self.size
+    halign: 'right'
+    valign: 'middle'
+    height: 60

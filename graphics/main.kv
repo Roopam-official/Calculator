@@ -1,0 +1,61 @@
+#: include 'graphics/custom_widgets.kv'
+#: include 'graphics/Root_Carousel/Slide_Calculator/top_app_bar.kv'
+#: include 'graphics/Root_Carousel/Slide_Calculator/Modes_&_History_Carousel/slide_normal_calculator.kv'
+#: include 'graphics/Root_Carousel/Slide_Calculator/Modes_&_History_Carousel/slide_advance_calculator.kv'
+#: include 'graphics/Root_Carousel/Slide_Calculator/Modes_&_History_Carousel/slide_history.kv'
+
+
+
+Carousel:
+	id: root_carousel
+	scroll_timeout: 0 # Disables the swiping feature of the slides
+	anim_move_duration: .3 # Change the speed of slide changing animation
+
+
+	BoxLayout:
+		id: Slide_Calculator
+		orientation: "vertical"
+		size: root.width, root.height
+
+		# Coverter Button , Advance Calculator Button and History
+		Top_App_Bar:
+			id: top_app_bar
+
+		# Shows the Input for the Output
+		TextInput:
+			id: calc_input
+			multiline: False
+        	background_disabled_normal: "white.png"
+			halign: "right"
+			font_size: 15
+			size_hint: (1, .083)
+			disabled: True
+			text: ""
+		# Takes Input and Gives Output
+		TextInput:
+			id: calc_display
+			multiline: False
+        	background_normal: "white.png"
+        	background_active: "white.png"
+			halign: "right"
+			font_size: 70
+			size_hint: (1, .25)
+			text: "0"
+
+		Carousel:
+			id: modes_and_history_carousel
+			scroll_timeout: 0 # Disables the swiping feature of the slides
+			anim_move_duration: .3 # Change the speed of slide changing animation
+			Slide_Normal_Calculator:
+				id: slide_normal_calculator
+			Slide_Advance_Calculator:
+				id: slide_advance_calculator
+			Slide_History:
+				id: slide_history
+
+
+	BoxLayout:
+		id: Slide_Converter
+		orientation: "vertical"
+		size: root.width, root.height
+		# Under Development
