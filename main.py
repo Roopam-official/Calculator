@@ -23,6 +23,8 @@ prerequisites.initialize()
 # App class
 class CalculatorApp(App):
     def build(self):
+        # App Icon
+        self.icon = 'resources/images/App_icon.ico'
         return Builder.load_file('graphics/main.kv')
 
 
